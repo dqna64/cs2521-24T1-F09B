@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <base href="https://cgi.cse.unsw.edu.au" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+    />
+
+    <link rel="stylesheet" href="/~cs2521/24T1/static/style.css" />
+
+    <title>COMP2521 24T1 - Week 02 Tutorial Questions</title>
+  </head>
+  <body class="d-flex flex-column" style="min-height: 100vh">
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-light no-print"
+      id="header-navbar"
+    >
+      <div class="container">
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+          aria-controls="navmenu"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="https://www.cse.unsw.edu.au/~cs2521/24T1/"
+          >COMP2521 24T1</a
+        >
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mr-auto">
+            <!--
+            <li class="nav-item active"><a class="nav-link" href="#">Outline</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Forum</a></li>
+            <li class="navbar-text px-2">|</li>
+            -->
+
+            <li class="nav-item active dropdown">
+              <a
+                role="button"
+                class="nav-link dropdown-toggle"
+                id="week-selector"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="color: white"
+              >
+                Week 02 <span class="caret"></span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="week-selector">
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/1/questions">
+                  Week 01
+                </a>
+
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/2/questions">
+                  Week 02
+                </a>
+
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/3/questions">
+                  Week 03 (tutors only)
+                </a>
+
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/4/questions">
+                  Week 04 (tutors only)
+                </a>
+
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/5/questions">
+                  Week 05 (tutors only)
+                </a>
+
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/7/questions">
+                  Week 07 (tutors only)
+                </a>
+
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/8/questions">
+                  Week 08 (tutors only)
+                </a>
+
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/9/questions">
+                  Week 09 (tutors only)
+                </a>
+
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/10/questions">
+                  Week 10 (tutors only)
+                </a>
+              </div>
+            </li>
+            <li class="nav-item active dropdown">
+              <a
+                role="button"
+                class="nav-link dropdown-toggle"
+                id="classtype-selector"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="color: white"
+              >
+                Tutorial <span class="caret"></span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="classtype-selector">
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/2/questions">
+                  Tutorial
+                </a>
+
+                <a class="dropdown-item" href="/~cs2521/24T1/lab/2/questions">
+                  Lab
+                </a>
+              </div>
+            </li>
+            <li class="nav-item active dropdown">
+              <a
+                role="button"
+                class="nav-link dropdown-toggle"
+                id="qa-selector"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="color: white"
+              >
+                Questions
+
+                <span class="caret"></span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="qa-selector">
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/2/questions">
+                  Questions
+                </a>
+                <a class="dropdown-item" href="/~cs2521/24T1/tut/2/answers">
+                  Answers (tutors only)
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main
+      class="container"
+      aria-label="Content"
+      style="flex: 1; padding-top: 4rem"
+    >
+      <header>
+        <h1 class="text-center">Week 02 Tutorial Questions</h1>
+        <h3 class="text-center">Recursion and Analysis of Algorithms</h3>
+      </header>
+      <div class="text-justify mt-4">
+        <h5>Recursion</h5>
+
+        <p>For the questions below, use the following data type:</p>
+
+        <div class="highlight">
+          <pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">	</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">};</span>
+</pre>
+        </div>
+
+        <div>
+          Refer to these linked list cases, as well as your own cases:
+          <div>
+            <img
+              class="local"
+              src="linked-list-case-diagrams.png"
+              style="width: 60%; margin: 0 auto; display: block"
+            />
+          </div>
+        </div>
+
+        <ol>
+          <li style="margin-top: 0.5rem">
+            <p>
+              Write a recursive function to compute the length of a linked list.
+              It should have this signature:
+            </p>
+
+            <div class="highlight">
+              <pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">listLength</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre>
+            </div>
+          </li>
+          <li style="margin-top: 0.5rem">
+            <p>
+              Write a recursive function to count the number of odd numbers in a
+              linked list. It should have this signature:
+            </p>
+
+            <div class="highlight">
+              <pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">listCountOdds</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre>
+            </div>
+          </li>
+          <li style="margin-top: 0.5rem">
+            <p>
+              Write a recursive functions to check whether a list is sorted in
+              ascending order. It should have this signature:
+            </p>
+
+            <div class="highlight">
+              <pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">listIsSorted</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre>
+            </div>
+          </li>
+          <li style="margin-top: 0.5rem">
+            <p>
+              Write a recursive function to delete the first instance of a value
+              from a linked list, if it exists. The function should return a
+              pointer to the beginning of the updated list. Use the following
+              interface:
+            </p>
+
+            <div class="highlight">
+              <pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">listDelete</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre>
+            </div>
+
+            <div>
+              Refer to these linked list cases, as well as your own cases:
+              <div>
+                <img
+                  class="local"
+                  src="linked-list-cases-for-delete.png"
+                  style="width: 60%; margin: 0 auto; display: block"
+                />
+              </div>
+            </div>
+
+            <div>
+              How would you modify this recursive function to delete all
+              instances of the value from the linked list?
+            </div>
+          </li>
+
+          <li style="margin-top: 0.5rem">
+            <p>
+              Recall that an alternative representation of a linked list uses a
+              struct that contains a pointer to the first node of the list:
+            </p>
+
+            <div class="highlight">
+              <pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">list</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">;</span>
+<span class="p">};</span>
+</pre>
+            </div>
+
+            <p>
+              How would your recursive solutions for the above questions change
+              if the functions took a <code>struct list</code> pointer instead
+              of a node pointer? For example:
+            </p>
+
+            <div class="highlight">
+              <pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">listLength</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">list</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">);</span>
+</pre>
+            </div>
+          </li>
+        </ol>
+
+        <h5>Analysis of Algorithms</h5>
+
+        <ol>
+          <li style="margin-top: 0.5rem">
+            <p>
+              Design an algorithm to determine if a string of length \( n \) is
+              a <i>palindrome</i> - that is, it reads the same backwards as
+              forwards.<br />
+
+              Examples of palindromes: "radar", "noon"
+              <br />
+              Examples of non-palindromes: "reveler", "detected"
+            </p>
+
+            <ol type="a">
+              <li>Write the algorithm in pseudocode.</li>
+              <li>Analyse the worst-case time complexity of your algorithm.</li>
+              <li>
+                Implement your algorithm in C. Your program should accept a
+                single command line argument, and check whether it is a
+                palindrome. Examples of the program executing are:
+
+                <pre is="tty">
+<kbd is="sh">./palindrome racecar</kbd>
+yes
+<kbd is="sh">./palindrome reviewer</kbd>
+no
+</pre>
+
+                <i>Hint:</i> You may use the standard library function
+                <i>strlen(3)</i>, which has prototype
+                <code>size_t strlen(char *)</code>, is defined in
+                <code>&lt;string.h&gt;</code>, and which computes the length of
+                a string (without counting its terminating
+                <code>'\0'</code> character).
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top: 0.5rem">
+            <p>
+              Using only techniques that you have learned so far, design an
+              algorithm to determine if an array contains two elements that sum
+              to a given value.
+            </p>
+
+            <div>
+              Refer to this two sum test case, as well as your own cases:
+              <div>
+                <img
+                  class="local"
+                  src="two-sum-test-case.png"
+                  style="width: 60%; margin: 0 auto; display: block"
+                />
+              </div>
+            </div>
+
+            <ol type="a">
+              <li>Write the algorithm in pseudocode.</li>
+              <li>
+                Analyse the worst-case time complexity of your algorithm.<br /><a
+                  href="https://www.chilimath.com/lessons/advanced-algebra/arithmetic-series-formula/"
+                  target="_blank"
+                  >Here is a reference to arithmetic series formula</a
+                >
+              </li>
+              <li>
+                Implement your algorithm as a function in C. The algorithm
+                should accept an array and a value as input and return true or
+                false.
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+    </main>
+
+    <footer class="mt-3 py-3 bg-dark text-center no-print" data-bs-theme="dark">
+      <p class="text-muted">
+        <small>
+          <strong>COMP2521 24T1: Data Structures and Algorithms</strong>
+          is brought to you by<br />
+          the
+          <a href="https://www.cse.unsw.edu.au/"
+            >School of Computer Science and Engineering</a
+          ><br />
+          at the
+          <a href="https://www.unsw.edu.au/">University of New South Wales</a>,
+          Sydney.<br />
+          For all enquiries, please email the class account at
+          <a href="mailto:cs2521@cse.unsw.edu.au">cs2521@cse.unsw.edu.au</a
+          ><br />
+
+          CRICOS Provider 00098G
+        </small>
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- math -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"
+      async
+    ></script>
+    <script>
+      document.querySelectorAll("img").forEach((ele) => {
+        if (ele.classList.contains("local") && ele.src) {
+          const baseURL = window.location
+            .toString()
+            .split("/")
+            .slice(0, -1)
+            .join("/");
+          const path = ele.src.split("/").slice(-1)[0];
+          ele.src = baseURL + "/" + path;
+        }
+      });
+    </script>
+  </body>
+</html>
